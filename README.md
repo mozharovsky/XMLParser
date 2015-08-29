@@ -69,8 +69,7 @@ print(result)
    </meta>
 </request>
 ```
-
-
+==========
 
 ####Extracting data from an XML converted string
 ```swift
