@@ -4,6 +4,12 @@
 
 Overview
 ==========
+* [Description](https://github.com/Mozharovsky/XMLParser#description)
+* [Requirements](https://github.com/Mozharovsky/XMLParser#requirements)
+* [Installation](https://github.com/Mozharovsky/XMLParser#installation)
+* [Usage](https://github.com/Mozharovsky/XMLParser#usage)
+* [Author](https://github.com/Mozharovsky/XMLParser#author)
+* [License](https://github.com/Mozharovsky/XMLParser#license)
 
 Description
 ==========
@@ -88,6 +94,5 @@ Author
 ==========
 Eugene Mozharovsky ([@DottieYottie](https://twitter.com/DottieYottie))
 
-License
+[License](https://github.com/Mozharovsky/XMLParser/blob/master/LICENSE)
 ==========
-[MIT License](https://github.com/Mozharovsky/XMLParser/blob/master/LICENSE). 
