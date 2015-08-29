@@ -7,35 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F5CDE961B9230B100C6672C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CDE951B9230B100C6672C /* main.swift */; };
+		8F5CDEB11B9249A200C6672C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CDEB01B9249A200C6672C /* AppDelegate.swift */; };
+		8F5CDEB31B9249A200C6672C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CDEB21B9249A200C6672C /* ViewController.swift */; };
+		8F5CDEB61B9249A200C6672C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5CDEB41B9249A200C6672C /* Main.storyboard */; };
+		8F5CDEB81B9249A200C6672C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5CDEB71B9249A200C6672C /* Assets.xcassets */; };
+		8F5CDEBB1B9249A200C6672C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5CDEB91B9249A200C6672C /* LaunchScreen.storyboard */; };
+		8F5CDEC61B9249A200C6672C /* XMLParser_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CDEC51B9249A200C6672C /* XMLParser_DemoTests.swift */; };
+		A5CF45BCFD319019B17D8966 /* Pods_XMLParser_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E021F5F9EF50089C7E58C2 /* Pods_XMLParser_Demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8F5CDE901B9230B100C6672C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+/* Begin PBXContainerItemProxy section */
+		8F5CDEC21B9249A200C6672C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5CDEA51B9249A200C6672C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5CDEAC1B9249A200C6672C;
+			remoteInfo = "XMLParser Demo";
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F5CDE921B9230B100C6672C /* XMLParser Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "XMLParser Demo"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F5CDE951B9230B100C6672C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		8F5CDE9D1B9230D200C6672C /* Dictionary+XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+XMLParser.swift"; sourceTree = "<group>"; };
-		8F5CDE9E1B9230D200C6672C /* String+XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XMLParser.swift"; sourceTree = "<group>"; };
-		8F5CDE9F1B9230D200C6672C /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		8F5CDEA01B9230D200C6672C /* XMLCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLCoder.swift; sourceTree = "<group>"; };
-		8F5CDEA11B9230D200C6672C /* XMLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
-		8F5CDEA21B9230D200C6672C /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		8F5CDEA31B9238A400C6672C /* Beta.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Beta.playground; sourceTree = "<group>"; };
+		44E021F5F9EF50089C7E58C2 /* Pods_XMLParser_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMLParser_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFA3F7E4F8B2CBB04B9137D /* Pods-XMLParser Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLParser Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMLParser Demo/Pods-XMLParser Demo.release.xcconfig"; sourceTree = "<group>"; };
+		8F5CDEAD1B9249A200C6672C /* XMLParser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XMLParser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5CDEB01B9249A200C6672C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F5CDEB21B9249A200C6672C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F5CDEB51B9249A200C6672C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F5CDEB71B9249A200C6672C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F5CDEBA1B9249A200C6672C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F5CDEBC1B9249A200C6672C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5CDEC11B9249A200C6672C /* XMLParser DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMLParser DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5CDEC51B9249A200C6672C /* XMLParser_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser_DemoTests.swift; sourceTree = "<group>"; };
+		8F5CDEC71B9249A200C6672C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC9F207E41628FDBFDBC46A /* Pods-XMLParser Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLParser Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMLParser Demo/Pods-XMLParser Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8F5CDE8F1B9230B100C6672C /* Frameworks */ = {
+		8F5CDEAA1B9249A200C6672C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CF45BCFD319019B17D8966 /* Pods_XMLParser_Demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5CDEBE1B9249A200C6672C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,55 +61,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F5CDE891B9230B100C6672C = {
+		17E988B1500A48DF22CAF8D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F5CDE941B9230B100C6672C /* XMLParser Demo */,
-				8F5CDE931B9230B100C6672C /* Products */,
+				FCC9F207E41628FDBFDBC46A /* Pods-XMLParser Demo.debug.xcconfig */,
+				7FFA3F7E4F8B2CBB04B9137D /* Pods-XMLParser Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E38920B17524DA723674DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44E021F5F9EF50089C7E58C2 /* Pods_XMLParser_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F5CDEA41B9249A200C6672C = {
+			isa = PBXGroup;
+			children = (
+				8F5CDEAF1B9249A200C6672C /* XMLParser Demo */,
+				8F5CDEC41B9249A200C6672C /* XMLParser DemoTests */,
+				8F5CDEAE1B9249A200C6672C /* Products */,
+				17E988B1500A48DF22CAF8D0 /* Pods */,
+				6E38920B17524DA723674DAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		8F5CDE931B9230B100C6672C /* Products */ = {
+		8F5CDEAE1B9249A200C6672C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F5CDE921B9230B100C6672C /* XMLParser Demo */,
+				8F5CDEAD1B9249A200C6672C /* XMLParser Demo.app */,
+				8F5CDEC11B9249A200C6672C /* XMLParser DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F5CDE941B9230B100C6672C /* XMLParser Demo */ = {
+		8F5CDEAF1B9249A200C6672C /* XMLParser Demo */ = {
 			isa = PBXGroup;
 			children = (
-				8F5CDE9C1B9230D200C6672C /* XMLParser */,
-				8F5CDE951B9230B100C6672C /* main.swift */,
-				8F5CDEA31B9238A400C6672C /* Beta.playground */,
+				8F5CDEB01B9249A200C6672C /* AppDelegate.swift */,
+				8F5CDEB21B9249A200C6672C /* ViewController.swift */,
+				8F5CDEB41B9249A200C6672C /* Main.storyboard */,
+				8F5CDEB71B9249A200C6672C /* Assets.xcassets */,
+				8F5CDEB91B9249A200C6672C /* LaunchScreen.storyboard */,
+				8F5CDEBC1B9249A200C6672C /* Info.plist */,
 			);
 			path = "XMLParser Demo";
 			sourceTree = "<group>";
 		};
-		8F5CDE9C1B9230D200C6672C /* XMLParser */ = {
+		8F5CDEC41B9249A200C6672C /* XMLParser DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				8F5CDE9D1B9230D200C6672C /* Dictionary+XMLParser.swift */,
-				8F5CDE9E1B9230D200C6672C /* String+XMLParser.swift */,
-				8F5CDE9F1B9230D200C6672C /* Tree.swift */,
-				8F5CDEA01B9230D200C6672C /* XMLCoder.swift */,
-				8F5CDEA11B9230D200C6672C /* XMLDecoder.swift */,
-				8F5CDEA21B9230D200C6672C /* XMLParser.swift */,
+				8F5CDEC51B9249A200C6672C /* XMLParser_DemoTests.swift */,
+				8F5CDEC71B9249A200C6672C /* Info.plist */,
 			);
-			path = XMLParser;
+			path = "XMLParser DemoTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F5CDE911B9230B100C6672C /* XMLParser Demo */ = {
+		8F5CDEAC1B9249A200C6672C /* XMLParser Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F5CDE991B9230B100C6672C /* Build configuration list for PBXNativeTarget "XMLParser Demo" */;
+			buildConfigurationList = 8F5CDECA1B9249A200C6672C /* Build configuration list for PBXNativeTarget "XMLParser Demo" */;
 			buildPhases = (
-				8F5CDE8E1B9230B100C6672C /* Sources */,
-				8F5CDE8F1B9230B100C6672C /* Frameworks */,
-				8F5CDE901B9230B100C6672C /* CopyFiles */,
+				1785C9C39618AAD7A38C1BEB /* Check Pods Manifest.lock */,
+				8F5CDEA91B9249A200C6672C /* Sources */,
+				8F5CDEAA1B9249A200C6672C /* Frameworks */,
+				8F5CDEAB1B9249A200C6672C /* Resources */,
+				C82AB3B538C8B6026FD4B796 /* Embed Pods Frameworks */,
+				F47E1E10086535560C6249F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -101,53 +140,181 @@
 			);
 			name = "XMLParser Demo";
 			productName = "XMLParser Demo";
-			productReference = 8F5CDE921B9230B100C6672C /* XMLParser Demo */;
-			productType = "com.apple.product-type.tool";
+			productReference = 8F5CDEAD1B9249A200C6672C /* XMLParser Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F5CDEC01B9249A200C6672C /* XMLParser DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5CDECD1B9249A200C6672C /* Build configuration list for PBXNativeTarget "XMLParser DemoTests" */;
+			buildPhases = (
+				8F5CDEBD1B9249A200C6672C /* Sources */,
+				8F5CDEBE1B9249A200C6672C /* Frameworks */,
+				8F5CDEBF1B9249A200C6672C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F5CDEC31B9249A200C6672C /* PBXTargetDependency */,
+			);
+			name = "XMLParser DemoTests";
+			productName = "XMLParser DemoTests";
+			productReference = 8F5CDEC11B9249A200C6672C /* XMLParser DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8F5CDE8A1B9230B100C6672C /* Project object */ = {
+		8F5CDEA51B9249A200C6672C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "DotMyWay LCC";
 				TargetAttributes = {
-					8F5CDE911B9230B100C6672C = {
+					8F5CDEAC1B9249A200C6672C = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					8F5CDEC01B9249A200C6672C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 8F5CDEAC1B9249A200C6672C;
 					};
 				};
 			};
-			buildConfigurationList = 8F5CDE8D1B9230B100C6672C /* Build configuration list for PBXProject "XMLParser Demo" */;
+			buildConfigurationList = 8F5CDEA81B9249A200C6672C /* Build configuration list for PBXProject "XMLParser Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 8F5CDE891B9230B100C6672C;
-			productRefGroup = 8F5CDE931B9230B100C6672C /* Products */;
+			mainGroup = 8F5CDEA41B9249A200C6672C;
+			productRefGroup = 8F5CDEAE1B9249A200C6672C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F5CDE911B9230B100C6672C /* XMLParser Demo */,
+				8F5CDEAC1B9249A200C6672C /* XMLParser Demo */,
+				8F5CDEC01B9249A200C6672C /* XMLParser DemoTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		8F5CDEAB1B9249A200C6672C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5CDEBB1B9249A200C6672C /* LaunchScreen.storyboard in Resources */,
+				8F5CDEB81B9249A200C6672C /* Assets.xcassets in Resources */,
+				8F5CDEB61B9249A200C6672C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5CDEBF1B9249A200C6672C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1785C9C39618AAD7A38C1BEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C82AB3B538C8B6026FD4B796 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMLParser Demo/Pods-XMLParser Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47E1E10086535560C6249F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMLParser Demo/Pods-XMLParser Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		8F5CDE8E1B9230B100C6672C /* Sources */ = {
+		8F5CDEA91B9249A200C6672C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5CDE961B9230B100C6672C /* main.swift in Sources */,
+				8F5CDEB31B9249A200C6672C /* ViewController.swift in Sources */,
+				8F5CDEB11B9249A200C6672C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5CDEBD1B9249A200C6672C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5CDEC61B9249A200C6672C /* XMLParser_DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8F5CDEC31B9249A200C6672C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5CDEAC1B9249A200C6672C /* XMLParser Demo */;
+			targetProxy = 8F5CDEC21B9249A200C6672C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F5CDEB41B9249A200C6672C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F5CDEB51B9249A200C6672C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F5CDEB91B9249A200C6672C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F5CDEBA1B9249A200C6672C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		8F5CDE971B9230B100C6672C /* Debug */ = {
+		8F5CDEC81B9249A200C6672C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -164,6 +331,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -182,15 +350,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		8F5CDE981B9230B100C6672C /* Release */ = {
+		8F5CDEC91B9249A200C6672C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,6 +375,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -219,47 +388,92 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8F5CDE9A1B9230B100C6672C /* Debug */ = {
+		8F5CDECB1B9249A200C6672C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC9F207E41628FDBFDBC46A /* Pods-XMLParser Demo.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "XMLParser Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotmyway.XMLParser-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8F5CDE9B1B9230B100C6672C /* Release */ = {
+		8F5CDECC1B9249A200C6672C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFA3F7E4F8B2CBB04B9137D /* Pods-XMLParser Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "XMLParser Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotmyway.XMLParser-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8F5CDECE1B9249A200C6672C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "XMLParser DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotmyway.XMLParser-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMLParser Demo.app/XMLParser Demo";
+			};
+			name = Debug;
+		};
+		8F5CDECF1B9249A200C6672C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "XMLParser DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotmyway.XMLParser-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMLParser Demo.app/XMLParser Demo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F5CDE8D1B9230B100C6672C /* Build configuration list for PBXProject "XMLParser Demo" */ = {
+		8F5CDEA81B9249A200C6672C /* Build configuration list for PBXProject "XMLParser Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F5CDE971B9230B100C6672C /* Debug */,
-				8F5CDE981B9230B100C6672C /* Release */,
+				8F5CDEC81B9249A200C6672C /* Debug */,
+				8F5CDEC91B9249A200C6672C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F5CDE991B9230B100C6672C /* Build configuration list for PBXNativeTarget "XMLParser Demo" */ = {
+		8F5CDECA1B9249A200C6672C /* Build configuration list for PBXNativeTarget "XMLParser Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F5CDE9A1B9230B100C6672C /* Debug */,
-				8F5CDE9B1B9230B100C6672C /* Release */,
+				8F5CDECB1B9249A200C6672C /* Debug */,
+				8F5CDECC1B9249A200C6672C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5CDECD1B9249A200C6672C /* Build configuration list for PBXNativeTarget "XMLParser DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5CDECE1B9249A200C6672C /* Debug */,
+				8F5CDECF1B9249A200C6672C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8F5CDE8A1B9230B100C6672C /* Project object */;
+	rootObject = 8F5CDEA51B9249A200C6672C /* Project object */;
 }

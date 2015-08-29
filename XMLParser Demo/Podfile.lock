@@ -1,0 +1,10 @@
+PODS:
+  - XMLParser (1.0)
+
+DEPENDENCIES:
+  - XMLParser (~> 1.0)
+
+SPEC CHECKSUMS:
+  XMLParser: e737ced4d8e6486028f741fecc0523d9ba55d0ae
+
+COCOAPODS: 0.38.2

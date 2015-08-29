@@ -1,0 +1,5 @@
+target 'XMLParser Demo' do
+platform :ios, '8.0'
+use_frameworks!
+pod 'XMLParser', '~> 1.0'
+end
