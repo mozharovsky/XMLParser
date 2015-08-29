@@ -17,6 +17,12 @@ public class XMLParser: XMLCoder, XMLDecoder {
     
     // MARK: - XMLCoder & XMLDecoder
     
+    /// Encodes a dictionary into an XML string.
+    /// - parameter data: A generic dictionary. Generally, the **Key** should be hashable and
+    /// in most of cases it must be a **String**. The value
+    /// might vary.
+    /// - parameter header: A header for the XML string.
+    /// - returns: A converted XML string.
     public func encode<Key : Hashable, Value>(data: Dictionary<Key, Value>, header: String = "") -> String {
         guard let tries = data.generateTries() else {
             return ""
@@ -25,6 +31,9 @@ public class XMLParser: XMLCoder, XMLDecoder {
         return header + tries.map { $0.parsedRequestBody() }.reduce("", combine: +)
     }
     
+    /// Decodes the given input into the specified output.
+    /// - parameter data: An input data, *String* type.
+    /// - returns: An array of string values.
     public func decode(data: String) -> Dictionary<String, [String]> {
         return findTags(data)
     }
