@@ -69,7 +69,33 @@ print(result)
    </meta>
 </request>
 ```
+
+####Associated tags 
+E.g. `<td class='achievements'>0</td>`
+```swift
+let data = [
+    "tr" : [
+        XMLTag(header: "td", name: "class", value: "num") : 1,
+        XMLTag(header: "td", name: "class", value: "achievments") : 0,
+        XMLTag(header: "td", name: "class", value: "sum") : 205
+    ]
+]
+
+let result = XMLParser.sharedParser.encode(data)
+print(result)
+```
+
+####Result
+```XML
+<tr>
+   <td class='achievments'>0</td>
+   <td class='num'>1</td>
+   <td class='sum'>205</td>
+</tr>
+```
+
 ==========
+
 
 ####Extracting data from an XML converted string
 ```swift
