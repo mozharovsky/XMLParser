@@ -57,10 +57,13 @@ public extension Dictionary {
     
     /// Converts an NSDictionary into a pure Swift Dictionary with generic 
     /// Key, Value pair.
-    public static func convertedDictionary<K: Hashable, V>(dictionary: NSDictionary) -> Dictionary<K, V> {
-        var dict = Dictionary<K, V>()
-        for (key, value) in dictionary {
-            if let key = key as? K, value = value as? V {
+    public static func convertedDictionary(dictionary: NSDictionary) -> Dictionary<XMLTag, Any> {
+        let _dictionary = dictionary.copy() as! NSDictionary
+        var dict = Dictionary<XMLTag, Any>()
+        for (key, value) in _dictionary {
+            if let key = key as? XMLTag {
+                dict[key] = value
+            } else if let key = XMLTag(anyValue: key) {
                 dict[key] = value
             }
         }
@@ -95,16 +98,16 @@ public extension Dictionary {
         var collections: Set<NSDictionary> = []
         collections.insert(self.standardDictionary())
         
-        func iterate(dictionary: Dictionary<Key, Any>) {
+        func iterate(dictionary: Dictionary<XMLTag, Any>) {
             for (_, value) in dictionary {
                 if let dict = value as? NSDictionary where !collections.contains(dict) {
                     collections.insert(dict)
-                    iterate(Dictionary.convertedDictionary(dict) as Dictionary<Key, Any>)
+                    iterate(Dictionary.convertedDictionary(dict) as Dictionary<XMLTag, Any>)
                 }
             }
         }
         
-        iterate(Dictionary.convertedDictionary(self.standardDictionary()) as Dictionary<Key, Any>)
+        iterate(Dictionary.convertedDictionary(self.standardDictionary()) as Dictionary<XMLTag, Any>)
         
         return collections.map { Dictionary(dictionary: $0) }
     }
@@ -136,11 +139,12 @@ public extension Dictionary {
         var collections: Set<NSDictionary> = []
         var chains: [Tree<Any>] = []
         
-        collections.insert(self.standardDictionary())
+        let initial = standardDictionary()
+        collections.insert(initial)
         
-        func iterate(dictionary: Dictionary<Key, Any>, lastChain: Tree<Any>?) {
+        func iterate(dictionary: Dictionary<XMLTag, Any>, lastChain: Tree<Any>?) {
             for (key, value) in dictionary {
-                let chain = Tree<Any>(previous: lastChain, node: ("\(key)", "\(value)"), next: nil)
+                let chain = Tree<Any>(previous: lastChain, node: (key, "\(value)"), next: nil)
                 chains += [chain]
                 
                 if let lastChain = lastChain {
@@ -151,14 +155,16 @@ public extension Dictionary {
                     lastChain.next! += [chain]
                 }
                 
+                
+                
                 if let dict = value as? NSDictionary where !collections.contains(dict) {
                     collections.insert(dict)
-                    iterate(Dictionary.convertedDictionary(dict) as Dictionary<Key, Any>, lastChain: chain)
+                    iterate(Dictionary.convertedDictionary(dict), lastChain: chain)
                 }
             }
         }
         
-        iterate(Dictionary.convertedDictionary(self.standardDictionary()) as Dictionary<Key, Any>, lastChain: nil)
+        iterate(Dictionary.convertedDictionary(initial), lastChain: nil)
         
         chains = chains.filter { $0.first() == $0 }
         

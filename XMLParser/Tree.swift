@@ -18,7 +18,7 @@ public class Tree<T> {
     public weak var previous: Tree<T>?
     
     /// Self node with values *name* and *value*.
-    public let node: (name: String, value: T)
+    public let node: (tag: XMLTag, value: T)
     
     /// The next tree if any.
     public var next: [Tree<T>]?
@@ -47,7 +47,7 @@ public class Tree<T> {
     // MARK: - Initialization
     
     /// A general initializer.
-    public init(previous: Tree<T>?, node: (String, T), next: [Tree<T>]?) {
+    public init(previous: Tree<T>?, node: (XMLTag, T), next: [Tree<T>]?) {
         self.previous = previous
         self.node = node
         self.next = next
@@ -55,15 +55,15 @@ public class Tree<T> {
     
     // MARK: - Convenience stuff
     
-    public convenience init(node: (String, T)) {
+    public convenience init(node: (XMLTag, T)) {
         self.init(previous: nil, node: node, next: nil)
     }
     
-    public convenience init(previous: Tree<T>, node: (String, T)) {
+    public convenience init(previous: Tree<T>, node: (XMLTag, T)) {
         self.init(previous: previous, node: node, next: nil)
     }
     
-    public convenience init(node: (String, T), next: [Tree<T>]) {
+    public convenience init(node: (XMLTag, T), next: [Tree<T>]) {
         self.init(previous: nil, node: node, next: next)
     }
     
@@ -104,10 +104,11 @@ extension Tree {
             }
             
             body += spaces
-            body += tree.node.name.startHeader()
+            let tag = tree.node.tag
+            body += (tag.header + (tag.name != nil ? " " + tag.name! : "") + (tag.value != nil ? "=\'\(tag.value!)\'" : "")).startHeader()
             
             
-            if tree.next == nil || tree.next?.count == 0 {
+            if ((tree.next == nil) || (tree.next?.count == 0)) && ((tree.node.value as? NSDictionary) == nil) {
                 body += "\(tree.node.value)"
             }
             
@@ -121,7 +122,7 @@ extension Tree {
                 body += spaces
             }
             
-            body += tree.node.name.endHeader()
+            body += tag.header.endHeader()
             body += "\n"
         }
         

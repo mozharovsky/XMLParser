@@ -9,59 +9,75 @@
 import Foundation
 
 /// An XML rich tag, e.g. `<td class='num'>`.
-struct XMLTag: Tag, Hashable, Equatable, StringLiteralConvertible {
+public class XMLTag: NSObject, Tag, StringLiteralConvertible {
     /// A header for a tag. Used to indicate start/end of the cell.
     /// (`<td class='num'>` -> 'td')
-    let header: String
+    public let header: String
     
     /// A name of the tag.
     /// (`<td class='num'>` -> 'class')
-    let name: String?
+    public let name: String?
     
     /// A value for a tag.
     /// (`<td class='num'>` -> 'num')
-    let value: String?
-    
-    // MARK: - Hashable
-    
-    /// Hash value.
-    var hashValue: Int {
-        return header.hashValue | (name?.hashValue.hashValue ?? 0) | (value?.hashValue ?? 0)
-    }
+    public let value: String?
     
     // MARK: - StringLiteralConvertible
     
     /// An initializer from String. 
     /// e.g. `let tag: XMLTag = "myTag"`
-    init(stringLiteral value: String) {
+    public required init(stringLiteral value: String) {
         self.header = value
         self.name = nil
         self.value = nil
     }
     
-    init(unicodeScalarLiteral value: String){
+    public required init(unicodeScalarLiteral value: String){
         self.header = value
         self.name = nil
         self.value = nil
     }
     
-    init(extendedGraphemeClusterLiteral value: String) {
+    required public init(extendedGraphemeClusterLiteral value: String) {
         self.header = value
         self.name = nil
         self.value = nil
     }
+    
     // MARK: - General initializer
     
     /// A general initializer. Header is required, when name and value 
     /// are optional parameters.
-    init(header: String, name: String? = nil, value: String? = nil) {
+    public init(header: String, name: String? = nil, value: String? = nil) {
         self.header = header
         self.name = name
         self.value = value
     }
+    
+    /// A failable initializer. Tries to automatically 
+    /// cast a given type to *String*, if can't be done
+    /// returns nil.
+    public init?(anyValue: Any) {
+        if let string = anyValue as? NSString {
+            self.header = String(string)
+            self.name = nil
+            self.value = nil
+            super.init()
+        } else {
+            self.header = ""
+            self.name = nil
+            self.value = nil
+            super.init()
+            
+            return nil
+        }
+    }
 }
 
-/// Indicates if two XMLTag are equal or not.
-func ==(lhs: XMLTag, rhs: XMLTag) -> Bool {
-    return lhs.hashValue == rhs.hashValue
+// MARK: - NSCopying
+
+extension XMLTag: NSCopying {
+    @objc public func copyWithZone(zone: NSZone) -> AnyObject {
+        return XMLTag(header: header, name: name, value: value)
+    }
 }

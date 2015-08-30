@@ -9,7 +9,7 @@
 import Foundation
 
 /// A protocol indicating a general tag.
-protocol Tag {
+public protocol Tag {
     /// A header for a tag.
     var header: String { get }
     
