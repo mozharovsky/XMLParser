@@ -24,7 +24,7 @@ Requirements
 Installation
 ==========
 
-###Cocoa Pods
+###CocoaPods
 ```ruby
 pod 'XMLParser', '~> 1.0'
 ```
